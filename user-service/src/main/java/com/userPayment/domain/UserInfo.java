@@ -13,7 +13,7 @@ import lombok.Value;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserInfo {
-    @Getter private final String userId;
+    @Getter private final Long userId;
     @Getter private final String name;
     @Getter private final String email;
     @Getter private final String address;
@@ -46,8 +46,8 @@ public class UserInfo {
 
     @Value
     public static class UserId{
-        String userId;
-        public UserId(String value){
+        Long userId;
+        public UserId(Long value){
             this.userId = value;
         }
     }

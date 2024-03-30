@@ -1,12 +1,11 @@
 package com.userPayment.adapter.in.web;
 
 
+import com.payment.common.WebAdapter;
 import com.userPayment.application.port.in.UserRegisterCommand;
 import com.userPayment.application.port.in.UserRegisterUseCase;
 import com.userPayment.domain.UserInfo;
-import common.WebAdapter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

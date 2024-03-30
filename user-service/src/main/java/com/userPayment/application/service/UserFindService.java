@@ -18,7 +18,6 @@ import lombok.RequiredArgsConstructor;
 public class UserFindService implements UserFindUseCase {
 
     private final UserFindPort userFindPort;
-
     @Override
     public UserInfo findUser(UserFindCommand userFindCommand) {
         return userFindPort.findUserInfo(new UserInfo.UserId(userFindCommand.getUserId()));

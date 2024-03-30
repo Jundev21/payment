@@ -37,4 +37,13 @@ public class UserEntity {
         this.isValidUser = isValidUser;
         this.isIndividualCompany = isIndividualCompany;
     }
+
+
+    public void EditUserEntity(String name, String address, String email, boolean isValidUser, boolean isIndividualCompany) {
+        this.name = name;
+        this.address = address;
+        this.email = email;
+        this.isValidUser = isValidUser;
+        this.isIndividualCompany = isIndividualCompany;
+    }
 }

@@ -1,5 +1,6 @@
 package com.userPayment.application.service;
 
+import com.payment.common.UserCase;
 import com.userPayment.adapter.out.persistence.UserEntity;
 import com.userPayment.adapter.out.persistence.UserInfoPersistenceAdapter;
 import com.userPayment.adapter.out.persistence.UserMapper;
@@ -8,7 +9,6 @@ import com.userPayment.application.port.in.UserRegisterCommand;
 import com.userPayment.application.port.in.UserRegisterUseCase;
 import com.userPayment.application.port.out.UserRegisterPort;
 import com.userPayment.domain.UserInfo;
-import common.UserCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -4,15 +4,20 @@ package com.userPayment.application.port.in;
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
+
+
+//command 는 request 데이터들을 한번 거쳐서 변형되는 단계
+//여기서 유효성 검사
 
 @Builder
-@Data
-@EqualsAndHashCode(callSuper = false)
-public class UserRegisterCommand{
+@Getter
+@Setter
+@AllArgsConstructor
+public class UserEditCommand{
 
+    @NotNull
+    private Long userId;
     @NotNull
     private String name;
     @NotNull
@@ -24,15 +29,11 @@ public class UserRegisterCommand{
     private boolean isValidUser;
     private boolean isIndividualCompany;
 
-
-
-    public UserRegisterCommand(String name, String address, String email, boolean isValidUser, boolean isIndividualCompany) {
-        this.name = name;
+    public UserEditCommand(Long userId, String address, String email, boolean isValidUser, boolean isIndividualCompany) {
+        this.userId = userId;
         this.address = address;
         this.email = email;
         this.isValidUser = isValidUser;
         this.isIndividualCompany = isIndividualCompany;
-
-//        this.validateSelf();
     }
 }

@@ -1,3 +1,7 @@
+//gradle 은 task 기준으로 하여 빌드를 진행한다.
+//task는 build.gradle에 작성되어진 문서들이다. task 는 groovy 문법을 사용해서 작성된다.
+// plugin 은 프로젝트에 기능을 추가하여 사용 할 수 있도록 해준다.
+
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.2.4'
@@ -5,7 +9,7 @@ plugins {
     id 'com.palantir.docker' version '0.35.0'
 }
 
-group = 'com.example'
+group = 'com.user-service'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -39,6 +43,17 @@ tasks.named('test') {
 }
 
 docker {
-    println("gradle docker-plugin start = spring-example:${project.version}")
+    println(tasks.bootJar.outputs.files)
 
+    //이미지 이름
+    name rootProject.name + '-' + project.name + ':' + version
+
+    //도커 파일 위치
+    dockerfile file('../Dockerfile')
+
+    //도커 이미지에 어떤것을 넣을 것인가?
+    files tasks.bootJar.outputs.files
+
+    //도커 파일에 사용할 것들
+    buildArgs('JAR_FILE' : tasks.bootJar.outputs.files.singleFile.name)
 }

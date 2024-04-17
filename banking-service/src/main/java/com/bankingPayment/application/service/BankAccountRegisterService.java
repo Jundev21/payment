@@ -1,10 +1,10 @@
 package com.bankingPayment.application.service;
 
+import com.bankingPayment.application.port.in.BankAccountRegisterCommand;
+import com.bankingPayment.application.port.in.BankAccountRegisterUseCase;
+import com.bankingPayment.domain.BankingInfo;
 import com.payment.common.UserCase;
-import com.userPayment.application.port.in.UserFindCommand;
-import com.userPayment.application.port.in.UserFindUseCase;
-import com.userPayment.application.port.out.UserFindPort;
-import com.userPayment.domain.UserInfo;
+
 import lombok.RequiredArgsConstructor;
 
 // 흐름
@@ -14,11 +14,10 @@ import lombok.RequiredArgsConstructor;
 // 외부 통신은 포트이고 데이터를 보내는거기때문에 port out 에 작성해야함.
 @UserCase
 @RequiredArgsConstructor
-public class UserFindService implements UserFindUseCase {
+public class BankAccountRegisterService implements BankAccountRegisterUseCase {
 
-    private final UserFindPort userFindPort;
     @Override
-    public UserInfo findUser(UserFindCommand userFindCommand) {
-        return userFindPort.findUserInfo(new UserInfo.UserId(userFindCommand.getUserId()));
+    public BankingInfo userRegister(BankAccountRegisterCommand bankAccountRegisterCommand) {
+        return null;
     }
 }

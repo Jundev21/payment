@@ -17,7 +17,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class UserEditCommand{
+public class BankAccountEditCommand {
 
     @NotNull
     private Long userId;
@@ -32,7 +32,7 @@ public class UserEditCommand{
     private boolean isValidUser;
     private boolean isIndividualCompany;
 
-    public UserEditCommand(Long userId, String address, String email, boolean isValidUser, boolean isIndividualCompany) {
+    public BankAccountEditCommand(Long userId, String address, String email, boolean isValidUser, boolean isIndividualCompany) {
         this.userId = userId;
         this.address = address;
         this.email = email;

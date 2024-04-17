@@ -9,12 +9,12 @@ import lombok.EqualsAndHashCode;
 @Builder
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class UserFindCommand {
+public class BankAccountFindCommand {
 
     @NotNull
     private Long userId;
 
-    public UserFindCommand(Long userId) {
+    public BankAccountFindCommand(Long userId) {
         this.userId = userId;
     //        this.validateSelf();
     }

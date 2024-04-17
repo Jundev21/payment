@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 @Builder
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class UserRegisterCommand{
+public class BankAccountRegisterCommand {
 
     @NotNull
     private String name;
@@ -26,7 +26,7 @@ public class UserRegisterCommand{
 
 
 
-    public UserRegisterCommand(String name, String address, String email, boolean isValidUser, boolean isIndividualCompany) {
+    public BankAccountRegisterCommand(String name, String address, String email, boolean isValidUser, boolean isIndividualCompany) {
         this.name = name;
         this.address = address;
         this.email = email;

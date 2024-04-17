@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetUserRegisterRequest {
+public class GetBankAccountRegisterRequest {
     private Long userId;
 }

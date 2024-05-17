@@ -10,7 +10,7 @@ import com.bankingPayment.domain.BankingInfo;
 @Component
 public class BankingMapper {
 
-    public BankingInfo mapToUserEntity(BankEntity bankEntity) {
+    public BankingInfo mapToBankingInfoEntity(BankEntity bankEntity) {
 
         return BankingInfo.generateUser(
             new BankingInfo.BankingId(bankEntity.getBankId()),

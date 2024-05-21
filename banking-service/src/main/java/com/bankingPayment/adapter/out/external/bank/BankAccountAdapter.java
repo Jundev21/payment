@@ -18,8 +18,7 @@ public class BankAccountAdapter implements ExternalBankAccountInfoPort {
 
 	@Override
 	public BankAccount getBankAccountInfo(GetBankAccountRequest getBankAccountRequest) {
-
-
-		return null;
+//		실제 외부 은행 서비스 통신 영역
+		return new BankAccount(getBankAccountRequest.getBankName(), getBankAccountRequest.getBankAccountNumber(),true);
 	}
 }

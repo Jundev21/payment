@@ -10,5 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GetBankAccountRegisterRequest {
-    private Long userId;
+    private String userRegisterId;
+    private String bankName;
+    private String bankAccountNumber;
+    private boolean isValidAccountNumber;
 }
